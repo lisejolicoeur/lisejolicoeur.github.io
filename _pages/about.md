@@ -9,9 +9,12 @@ redirect_from:
 
 Hi! My name is Lise Jolicoeur and I am currently a 3rd year PhD Student at CEA, INRIA Bordeaux and University of Bordeaux.
 After studying computer science at IUT d'Orsay for a 2-year degree, I got an engineering degree from Université de Technologie de Compiègne.
+This page presents my PhD project:
+
+Towards secure cluster architectures for HPC workflows
+======
 
 Background
-======
 ------
 Since the design of the first clusters dedicated to high performance computing more than 25 years ago, the field of high performance scientific computing has undergone massive evolution. The processing power of these clusters has been multiplied by several million by mobilizing a growing number of processing units with hierarchical and heterogeneous architectures. The use of high-performance computing has spread to most scientific fields, leading to the use of these machines for more and more diverse applications. They are integrated within workflows that can include pre- and post-processing steps or even the publication of results within community databases.
 
@@ -21,7 +24,6 @@ At the same time, cloud computing providers have designed architectures that are
 
 
 Thesis objectives
-======
 ------
 The main objective of this thesis is to show how we can bring cloud capabilities on HPC clusters by studying and implementing different approaches. To bring flexibility in HPC clusters and allow the execution of services and complex workflows, we develop a container network to create isolated user environments on top of HPC resources. This container network is implemented in PCOCC, a containerization software developped at CEA that integrates with Slurm to launched containerized jobs. We conduct multiple experiments to determine the impact of the container network on performance, as networking is a crucial component to optimize
 the execution of HPC workloads. Additionally, we virtualize and benchmark RDMA communications in order to provide full isolation between workloads of different users
