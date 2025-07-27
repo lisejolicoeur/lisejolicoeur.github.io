@@ -1,45 +1,56 @@
 ---
 layout: archive
-title: "CV"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
-
 {% include base_path %}
+
+
+Open and download my CV in PDF
+======
+
+<ul>
+  <li>
+    <a href="/files/CV_LiseJolicoeur.pdf" target="_blank" rel="noopener">
+      French version
+    </a>
+  </li>
+</ul>
+
+<ul>
+  <li>
+    <a href="/files/CV_LiseJolicoeur_ENG.pdf" target="_blank" rel="noopener">
+      English version
+    </a>
+  </li>
+</ul>
+
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* (expected) Ph.D in HPC/Cloud convergence, CEA/INRIA Bordeaux/Université de Bordeaux, 2025
+* Engineering degree (M.S.) in Computer Science, Université de Technologie de Compiègne (UTC), 2022
+* DUT in Computer Science, IUT d'Orsay, 2019
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Summer 2024: Summer school internship during PhD
+  * Lawrence Livermore National Laboratory
+  * Duties included: Exploring HPC/Cloud convergence tools with a focus on rootless Kubernetes
+  * Supervisors: Daniel Milroy, Vanessa Sochat
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Fall 2015: Assistant engineer internship
+  * CEA
+  * Duties included: Developping isolation mechanisms based on virtualization in HPC clusters
+  * Supervisors: François Diakhaté
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* 2020-2021: Assistant engineer internship
+  * Olvid (https://olvid.io/fr/)
+  * Duties included: Development of web interface for the Olvid application with Vue.js (https://web.olvid.io/qrcode)
+
 
 Publications
 ======
@@ -47,18 +58,7 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* President of the PhD student association for CEA in Ile-de-France (ACTIF)

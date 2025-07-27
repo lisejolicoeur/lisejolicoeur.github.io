@@ -1,56 +1,35 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Personal page of Lise Jolicoeur, 3rd year PhD Student at CEA"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+Hi! My name is Lise Jolicoeur and I am currently a 3rd year PhD Student at CEA, INRIA Bordeaux and University of Bordeaux.
+After studying computer science at IUT d'Orsay for a 2-year degree, I got an engineering degree from Université de Technologie de Compiègne.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
-
-A data-driven personal website
+Background
 ======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+------
+Since the design of the first clusters dedicated to high performance computing more than 25 years ago, the field of high performance scientific computing has undergone massive evolution. The processing power of these clusters has been multiplied by several million by mobilizing a growing number of processing units with hierarchical and heterogeneous architectures. The use of high-performance computing has spread to most scientific fields, leading to the use of these machines for more and more diverse applications. They are integrated within workflows that can include pre- and post-processing steps or even the publication of results within community databases.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+To meet these needs, computing centers must evolve the service that is offered using these clusters. The model generally used - a multi-user UNIX environment replicated uniformly on a set of compute nodes that users can allocate using a job manager is indeed reaching its limits. On the one hand, it is very difficult to maintain a uniform software environment to meet the needs of all users. On the other hand, job managers used in HPC are not fully adapted to dynamic workflows or workflows based on persistent services. Finally, these shared software environments offer a large attack surface, which makes it necessary to restrict the way they are used to protect against malicious users as much as possible.
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+At the same time, cloud computing providers have designed architectures that are intended from the outset to allow great flexibility in the execution of any type of calculation while guaranteeing strong isolation between their customers. However, using these cloud infrastructures for HPC often means deploying an architecture similar to that of a traditional cluster within the resources allocated by the provider. This requires duplicating management efforts for each group of users and does not allow pooling resources and skills as efficiently.
 
-Getting started
+
+Thesis objectives
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-
-Site-wide configuration
 ------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+The main objective of this thesis is to show how we can bring cloud capabilities on HPC clusters by studying and implementing different approaches. To bring flexibility in HPC clusters and allow the execution of services and complex workflows, we develop a container network to create isolated user environments on top of HPC resources. This container network is implemented in PCOCC, a containerization software developped at CEA that integrates with Slurm to launched containerized jobs. We conduct multiple experiments to determine the impact of the container network on performance, as networking is a crucial component to optimize
+the execution of HPC workloads. Additionally, we virtualize and benchmark RDMA communications in order to provide full isolation between workloads of different users
+for all communications.
+We also study two approaches for bringing flexibility to HPC clusters. In collaboration with the Lawrence Livermore National Laboratory that hosted me for a summer internship in 2024, we studied and benchmarked the execution of HPC applications in a rootless Kubernetes implementation called Usernetes. This approach enables
+users to launch Kubernetes as a resource on HPC clusters to easily launch services alongside HPC applications on the same resources. In particular, we focused on
+integrating RDMA and GPUs to reach near native performance for workloads running in Usernetes.
+Finally, we studied the integration of another project called HPK on our cluster. HPK allows us to deploy a minimal Kubernetes cluster on HPC resources and 
+launch Kubernetes workloads through Slurm. This approach enables a unified handling of resources on HPC clusters while giving users a Kubernetes interface to submit and manage workloads in a cloud native way. We focus on integrating PCOCC into this solution to have tight integration between workloads launched directly through Slurm and workloads launch with Kubernetes. 
+Besides the technical contributions, we also propose a detailed state of the art of HPC and Cloud convergence to show how the ecosystem is evolving in both HPC and Cloud to support increasingly converged workflows that require both HPC and cloud capabilities.
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
-
-**Markdown generator**
-
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
-
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
-
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.

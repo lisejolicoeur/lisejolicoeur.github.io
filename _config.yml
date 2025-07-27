@@ -15,7 +15,7 @@ name                     : &name "Lise Jolicoeur"
 description              : &description "personal description"
 url                      : https://lisejolicoeur.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "lisejolicoeur/lisejolicoeur.github.io"
+repository               : "lisejolicoeur.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -25,7 +25,7 @@ author:
   avatar           : "profile.jpg"
   name             : "Lise Jolicoeur"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "PhD Student"
   location         : "France"
   employer         : "CEA"
   uri              : # URL
@@ -85,6 +85,8 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+  workshops:
+    title: 'Workshop Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
