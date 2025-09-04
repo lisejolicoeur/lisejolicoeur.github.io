@@ -32,6 +32,6 @@ We also study two approaches for bringing flexibility to HPC clusters. In collab
 users to launch Kubernetes as a resource on HPC clusters to easily launch services alongside HPC applications on the same resources. In particular, we focused on
 integrating RDMA and GPUs to reach near native performance for workloads running in Usernetes.
 Finally, we studied the integration of another project called HPK on our cluster. HPK allows us to deploy a minimal Kubernetes cluster on HPC resources and 
-launch Kubernetes workloads through Slurm. This approach enables a unified handling of resources on HPC clusters while giving users a Kubernetes interface to submit and manage workloads in a cloud native way. We focus on integrating PCOCC into this solution to have tight integration between workloads launched directly through Slurm and workloads launch with Kubernetes. 
+launch Kubernetes workloads through Slurm. This approach enables a unified handling of resources on HPC clusters while giving users a Kubernetes interface to submit and manage workloads in a cloud native way. We focus on integrating PCOCC into this solution to have tight integration between workloads launched directly through Slurm and workloads launched with Kubernetes. 
 Besides the technical contributions, we also propose a detailed state of the art of HPC and Cloud convergence to show how the ecosystem is evolving in both HPC and Cloud to support increasingly converged workflows that require both HPC and cloud capabilities.
 
